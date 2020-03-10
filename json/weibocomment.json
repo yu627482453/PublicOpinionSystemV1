@@ -1,0 +1,81 @@
+{
+    "ok": 1,    // ...
+    "data": {
+        "data": [{
+                "created_at": "Wed Mar 04 15:33:14 +0800 2020", // =(created_at) TODO
+                "id": "4478777352638515",   // =(id)
+                "rootid": "4478777352638515",   //...
+                "rootidstr": "4478777352638515",    // ...
+                "floor_number": 112,    // =(floor_number)
+                "text": "请不要干扰剧组工作，放过鞠婧祎谢谢",   // =(text)
+                "disable_reply": 0, // ...
+                "user": {   // [user](user_id)
+                    "id": 7256315986,   // =(user_id)
+                    "screen_name": "亲爱的Dora啊",  // =(screen_name)
+                    "profile_image_url": "https://tvax1.sinaimg.cn/crop.0.0.996.996.180/007V4LgCly8gb56f9d7qpj30ro0rodjv.jpg?KID=imgbed,tva&Expires=1583331734&ssig=xr%2Bc5ac3YN",  // =(profile_image_url)
+                    "profile_url": "https://m.weibo.cn/u/7256315986?uid=7256315986",    // =(profile_url)
+                    "statuses_count": 33,   // 在线天数? =(statuses_count)
+                    "verified": false, // 认证状态 =(verified)
+                    "verified_type": -1,
+                    "close_blue_v": false,
+                    "description": "山河远阔，人间烟火，风在，我也在", // 个人简介 =(description)
+                    "gender": "f",// 性别=(gender)
+                    "mbtype": 0,    // ...
+                    "urank": 4, // ...
+                    "mbrank": 0,    // ...
+                    "follow_me": false, // ...
+                    "following": false, // ...
+                    "followers_count": 1,   // 粉丝数 =(followers_count)
+                    "follow_count": 49, //关注数 =(follow_count)
+                    "cover_image_phone": "https://tva1.sinaimg.cn/crop.0.0.640.640.640/549d0121tw1egm1kjly3jj20hs0hsq4f.jpg",
+                    "avatar_hd": "https://wx1.sinaimg.cn/orj480/007V4LgCly8gb56f9d7qpj30ro0rodjv.jpg",
+                    "like": false,  // ...
+                    "like_me": false,   // ...
+                    "badge": {  // ...
+                        "bind_taobao": 1,
+                        "user_name_certificate": 1,
+                        "china_2019": 1,
+                        "wbzy_2019": 1,
+                        "hongbao_2020": 2
+                    }
+                },
+                "mid": "4478777352638515",  // ...
+                "readtimetype": "comment",  // ...
+                "comments": false,  // ...
+                "max_id": 0,    // ...
+                "total_number": 0,
+                "isLikedByMblogAuthor": false,
+                "more_info_type": 0,
+                "bid": "Ix3mfb4oH",
+                "source": "",
+                "like_count": 25,   // 点赞数 =(like_count)
+                "liked": false
+            },
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "total_number": 127,    // 总数 =(total_number)
+        "status": {
+            "comment_manage_info": {
+                "comment_permission_type": -1,
+                "approval_comment_type": 0
+            }
+        },
+        "max_id": 166051597620, // ...
+        "max": 7, // ...
+        "max_id_type": 0    // ...
+    }
+}

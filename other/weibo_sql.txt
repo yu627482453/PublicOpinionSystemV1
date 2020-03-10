@@ -1,0 +1,434 @@
+-- 1. 创建gmall数据库
+create database gmall;
+
+-- 2. 使用gmall数据库
+use gmall;
+
+---------------------
+---------------------
+--    ODS
+---------------------
+---------------------
+
+
+---------------------
+-- weibo_index
+---------------------
+
+-- 1.
+drop table if exists ods_weibo_index_log;
+
+-- 2.
+CREATE EXTERNAL TABLE ods_weibo_index_log(`line` string)
+PARTITIONED BY (`dt` string)
+stored as
+INPUTFORMAT 'com.hadoop.mapred.DeprecatedLzoTextInputFormat'
+OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION '/warehouse/gmall/ods/ods_weibo_index_log';
+
+-- 3.
+load data inpath '/origin_data/gmall/log/weibo/topic_index/2020-03-06' into table gmall.ods_weibo_index_log partition(dt='2020-03-06');
+
+
+------------------------
+-- weibo_comment
+------------------------
+
+-- 1.
+drop table if exists ods_weibo_comment_log;
+
+-- 2.
+CREATE EXTERNAL TABLE ods_weibo_comment_log(`line` string)
+PARTITIONED BY (`dt` string)
+STORED AS
+INPUTFORMAT 'com.hadoop.mapred.DeprecatedLzoTextInputFormat'
+OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION '/warehouse/gmall/ods/ods_weibo_comment_log';
+
+-- 3.
+load data inpath '/origin_data/gmall/log/weibo/topic_comment/2020-03-06' into table gmall.ods_weibo_comment_log partition(dt='2020-03-06');
+
+
+
+---------------------
+---------------------
+--    DWD
+---------------------
+---------------------
+
+---------------------
+-- weibo_index
+---------------------
+
+-- 1.
+drop table if exists dwd_weibo_index_log;
+
+-- 2.
+CREATE EXTERNAL TABLE dwd_weibo_index_log(
+`id` string,
+`text` string, 
+`text_length` int,
+`created_at` string,
+`reposts_count` int,
+`comments_count` int,
+`attitudes_count` int,
+`source` string,
+`pic_num` int,
+`pics_json` string,
+`scheme` string,
+`user_id` string)
+PARTITIONED BY (`dt` string)
+stored as parquet
+location '/warehouse/gmall/dwd/dwd_weibo_index_log/';
+
+
+-- 3.
+add jar /opt/module/hive/hivefunction-1.0-SNAPSHOT.jar;
+
+create temporary function index_analizer as 'com.nex.weibo.IndexJsonUDTF';
+
+-- 4. 
+insert overwrite table dwd_weibo_index_log
+PARTITION (dt='2020-03-06')
+select index_analizer(line)
+from ods_weibo_index_log
+where dt='2020-03-06';
+
+
+---------------------
+-- weibo_comment
+---------------------
+
+-- 1.
+drop table if exists dwd_weibo_comment_log;
+
+-- 2.
+CREATE EXTERNAL TABLE dwd_weibo_comment_log(
+`id` string,
+`created_at` string,
+`floor_number` string,
+`text` string,
+`like_count` int,
+`index_id` string,
+`user_id` string)
+PARTITIONED BY (`dt` string)
+stored as parquet
+location '/warehouse/gmall/dwd/dwd_weibo_comment_log/';
+
+-- 3.
+
+add jar /opt/module/hive/hivefunction-1.0-SNAPSHOT.jar;
+
+create temporary function comment_analizer as 'com.nex.weibo.CommentJsonUDTF';
+
+-- 4.
+insert overwrite table dwd_weibo_comment_log
+PARTITION (dt='2020-03-06')
+select comment_analizer(line)
+from ods_weibo_comment_log
+where dt='2020-03-06';
+
+
+---------------------
+-- weibo_user
+---------------------
+
+-- 1.
+drop table if exists dwd_weibo_user_log;
+
+-- 2.
+CREATE EXTERNAL TABLE dwd_weibo_user_log(
+`id` string,
+`screen_name` string,
+`profile_url` string,
+`profile_image_url` string,
+`statuses_count` int,
+`verified` int,
+`verified_reason` string,
+`description` string,
+`gender` int,
+`followers_count` int,
+`follow_count` int,
+`text` string)
+PARTITIONED BY (`dt` string)
+stored as parquet
+location '/warehouse/gmall/dwd/dwd_weibo_user_log/';
+
+-- 3.
+
+add jar /opt/module/hive/hivefunction-1.0-SNAPSHOT.jar;
+
+create temporary function user_index_analizer as 'com.nex.weibo.UserIndexJsonUDTF';
+
+create temporary function user_comment_analizer as 'com.nex.weibo.UserCommentJsonUDTF';
+
+-- 4.
+
+insert overwrite table dwd_weibo_user_log
+PARTITION (dt='2020-03-06')
+select user_index_analizer(line)
+from ods_weibo_index_log
+where dt='2020-03-06';
+
+insert into table dwd_weibo_user_log
+PARTITION (dt='2020-03-06')
+select user_comment_analizer(line)
+from ods_weibo_comment_log
+where dt='2020-03-06';
+
+
+---------------------
+---------------------
+--    DWS
+---------------------
+---------------------
+
+---------------------
+--   业务： 日热点、 评论、 人
+---------------------
+
+drop table if exists dws_uv_index_day;
+create external table dws_uv_index_day
+(
+`id` string COMMENT '唯一标识',
+`text` string COMMENT '文本内容',
+`reposts_count` int COMMENT '转发数',
+`comments_count` int COMMENT '评论数',
+`attitudes_count` int COMMENT '点赞数',
+`created_at` string COMMENT '创建时间'
+) COMMENT '每日热点'
+PARTITIONED BY (`dt` string)
+stored as parquet
+location '/warehouse/gmall/dws/dws_uv_index_day/';
+
+drop table if exists dws_uv_comment_day;
+create external table dws_uv_comment_day
+(
+`id` string COMMENT '唯一标识',
+`created_at` string COMMENT '创建时间',
+`text` string COMMENT '文本内容',
+`like_count` int COMMENT '点赞数',
+`index_id` string COMMENT '主题内容'
+) COMMENT '每日评论'
+PARTITIONED BY (`dt` string)
+stored as parquet
+location '/warehouse/gmall/dws/dws_uv_comment_day/';
+
+drop table if exists dws_uv_user_day;
+create external table dws_uv_user_day
+(
+`id` string COMMENT '唯一标识',
+`screen_name` string COMMENT '昵称',
+`statuses_count` int COMMENT '在线数',
+`verified` int COMMENT '是否认证',
+`verified_reason` string COMMENT '认证标签',
+`description` string COMMENT '描述',
+`gender` int COMMENT '性别',
+`followers_count` int COMMENT '粉丝数',
+`follow_count` int COMMENT '关注数',
+`text` string COMMENT '发布文本内容'
+) COMMENT '每日用户'
+PARTITIONED BY (`dt` string)
+stored as parquet
+location '/warehouse/gmall/dws/dws_uv_user_day/';
+
+
+-----------------------------
+-- 插入数据
+----------------------------
+insert overwrite table dws_uv_index_day
+partition(dt='2020-03-06')
+select
+concat_ws('|', collect_set(id)) id,
+concat_ws('|', collect_set(text)) text,
+max(reposts_count) reposts_count,
+max(comments_count) comments_count,
+max(attitudes_count) attitudes_count,
+concat_ws('|', collect_set(created_at)) created_at
+from dwd_weibo_index_log
+where dt='2020-03-06'
+group by id;
+
+
+insert overwrite table dws_uv_comment_day
+partition(dt='2020-03-06')
+select
+concat_ws('|', collect_set(id)) id,
+concat_ws('|', collect_set(created_at)) created_at,
+concat_ws('|', collect_set(text)) text,
+max(like_count) like_count,
+concat_ws('|', collect_set(index_id)) index_id
+from dwd_weibo_comment_log
+where dt='2020-03-06'
+group by id;
+
+insert overwrite table dws_uv_user_day
+partition(dt='2020-03-06')
+select
+concat_ws('|', collect_set(id)) id,
+concat_ws('|', collect_set(screen_name)) screen_name,
+max(statuses_count) statuses_count,
+max(verified) verified,
+concat_ws('|', collect_set(verified_reason)) verified_reason,
+concat_ws('|', collect_set(description)) description,
+max(gender) gender,
+max(followers_count) followers_count,
+max(follow_count) follow_count,
+concat_ws('|', collect_set(text)) text
+from dwd_weibo_user_log
+where dt='2020-03-06'
+group by id;
+
+
+
+---------------------
+---------------------
+--    ADS
+---------------------
+---------------------
+
+---------------------
+-- 需求一 热点成长
+---------------------
+
+drop table if exists ads_index_grow;
+create external table ads_index_grow
+(
+`id` string COMMENT '唯一标识',
+`text` string COMMENT '文本内容',
+`day1_reposts_count` int COMMENT '第1天转发数',
+`day2_reposts_count` int COMMENT '第2天转发数',
+`day4_reposts_count` int COMMENT '第4天转发数',
+`day7_reposts_count` int COMMENT '第7天转发数',
+`day1_comments_count` int COMMENT '第1天评论数',
+`day2_comments_count` int COMMENT '第2天评论数',
+`day4_comments_count` int COMMENT '第4天评论数',
+`day7_comments_count` int COMMENT '第7天评论数',
+`day1_attitudes_count` int COMMENT '第1天点赞数',
+`day2_attitudes_count` int COMMENT '第2天转发数',
+`day4_attitudes_count` int COMMENT '第4天转发数',
+`day7_attitudes_count` int COMMENT '第7天转发数',
+`created_at` string COMMENT '创建时间',
+`user_id` string COMMENT '用户id'
+)COMMENT '热点成长'
+partitioned by (`dt` string)
+stored as parquet
+location '/warehouse/gmall/ads/ads_index_grow/';
+
+
+--
+
+
+
+
+---------------------
+-- 需求二 热点分析
+---------------------
+
+drop table if exists ads_index_analysis;
+create external table ads_index_analysis
+(
+`id` string COMMENT '唯一标识',
+`text` string COMMENT '文本内容',
+`reposts_count` int COMMENT '转发数',
+`comments_count` int COMMENT '评论数',
+`attitudes_count` int COMMENT '点赞数',
+`created_at` string COMMENT '创建时间'
+) COMMENT '热点分析'
+row format delimited fields terminated by '\t'
+location '/warehouse/gmall/ads/ads_index_analysis/';
+
+
+--
+
+insert overwrite table ads_index_analysis
+select
+id id,
+text text,
+reposts_count reposts_count,
+comments_count comments_count,
+attitudes_count attitudes_count,
+created_at created_at
+from dws_uv_index_day
+where dt='2020-03-06';
+
+
+
+---------------------
+-- 需求三 评论分析
+---------------------
+
+drop table if exists ads_comment_analysis;
+create external table ads_comment_analysis
+(
+`id` string COMMENT '唯一标识',
+`created_at` string COMMENT '创建时间',
+`text` string COMMENT '文本内容',
+`like_count` int COMMENT '点赞数',
+`index_text` string COMMENT '主题内容'
+) COMMENT '评论分析'
+row format delimited fields terminated by '\t'
+location '/warehouse/gmall/ads/ads_comment_analysis/';
+
+
+--
+
+insert overwrite table ads_comment_analysis
+select
+comment.id id,
+comment.created_at created_at,
+comment.text text,
+comment.like_count like_count,
+index.text text
+from 
+(
+select
+*
+from dws_uv_index_day
+where dt='2020-03-06'
+) index join
+(
+select
+*
+from dws_uv_comment_day
+where dt='2020-03-06'
+) comment on index.id = comment.index_id 
+;
+
+---------------------
+-- 需求四 用户画像
+---------------------
+
+drop table if exists ads_user_analysis;
+create external table ads_user_analysis
+(
+`id` string COMMENT '唯一标识',
+`screen_name` string COMMENT '昵称',
+`statuses_count` int COMMENT '在线数',
+`verified` int COMMENT '是否认证',
+`verified_reason` string COMMENT '认证标签',
+`description` string COMMENT '描述',
+`gender` int COMMENT '性别',
+`followers_count` int COMMENT '粉丝数',
+`follow_count` int COMMENT '关注数',
+`text` string COMMENT '发布文本内容'
+) COMMENT '用户画像'
+row format delimited fields terminated by '\t'
+location '/warehouse/gmall/ads/ads_user_analysis';
+
+--
+insert overwrite table ads_user_analysis
+select
+id id,
+screen_name screen_name,
+statuses_count statuses_count,
+verified verified,
+verified_reason verified_reason,
+description description,
+if(gender=1, '男', '女') gender,
+followers_count followers_count,
+follow_count follow_count,
+text text
+from dws_uv_user_day
+where dt='2020-03-06';
+

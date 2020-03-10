@@ -1,0 +1,33 @@
+/opt/module/sqoop/bin/sqoop export \
+--connect "jdbc:mysql://hadoop102:3306/gmall?useUnicode=true&characterEncoding=utf-8"  \
+--username root \
+--password 000000 \
+--table ads_index_analysis \
+--hcatalog-database gmall \
+--export-dir /warehouse/gmall/ads/ads_index_analysis \
+--input-fields-terminated-by "\t" \
+--input-null-string '\\N'    \
+--input-null-non-string '\\N'
+
+
+/opt/module/sqoop/bin/sqoop export \
+--connect "jdbc:mysql://hadoop102:3306/gmall?useUnicode=true&characterEncoding=utf-8"  \
+--username root \
+--password 000000 \
+--table ads_comment_analysis \
+--num-mappers 1 \
+--export-dir /warehouse/gmall/ads/ads_comment_analysis \
+--input-fields-terminated-by "\t" \
+--input-null-string '\\N'    \
+--input-null-non-string '\\N'
+
+/opt/module/sqoop/bin/sqoop export \
+--connect "jdbc:mysql://hadoop102:3306/gmall?useUnicode=true&characterEncoding=utf-8"  \
+--username root \
+--password 000000 \
+--table ads_user_analysis \
+--num-mappers 1 \
+--export-dir /warehouse/gmall/ads/ads_user_analysis \
+--input-fields-terminated-by "\t" \
+--input-null-string '\\N'    \
+--input-null-non-string '\\N'
