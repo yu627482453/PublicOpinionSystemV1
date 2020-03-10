@@ -12,6 +12,4 @@ import org.springframework.stereotype.Service;
  */
 public interface SysUserService {
 
-    public 
-
 }
