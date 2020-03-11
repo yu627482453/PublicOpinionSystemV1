@@ -15,11 +15,20 @@ public class MsgDTO {
     private int code;
     private String msg;
     private String url;
+    private String value;
 
     public MsgDTO(int code, String msg, String url) {
         this.code = code;
         this.msg = msg;
         this.url = url;
+        this.value = null;
+    }
+
+    public MsgDTO(int code, String msg, String url, String value) {
+        this.code = code;
+        this.msg = msg;
+        this.url = url;
+        this.value = value;
     }
 
     @Override
@@ -28,6 +37,7 @@ public class MsgDTO {
                 "code=" + code +
                 ", msg='" + msg + '\'' +
                 ", url='" + url + '\'' +
+                ", value='" + value + '\'' +
                 '}';
     }
 
@@ -93,5 +103,14 @@ public class MsgDTO {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public MsgDTO setValue(String value) {
+        this.value = value;
+        return this;
+    }
+
+    public String getValue() {
+        return value;
     }
 }

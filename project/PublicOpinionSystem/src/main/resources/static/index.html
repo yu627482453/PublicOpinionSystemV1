@@ -26,6 +26,11 @@
     <script src="vendor/echarts/echarts.js"></script>
     <script src="vendor/echarts/echarts-wordcloud.js"></script>
 
+        <!-- toastr -->
+        <link href="vendor/toastr/toastr.min.css" rel="stylesheet">
+
+        <script src="vendor/toastr/toastr.min.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -37,7 +42,8 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="javascript:void(0);"
+                id="sidebar-index">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -49,7 +55,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="javascript:void(0);" id="nav-link-index">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>PUBLIC OPINION</span></a>
             </li>
@@ -72,8 +78,8 @@
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Spider:</h6>
-                        <a class="collapse-item" href="buttons.html">Weibo</a>
-                        <a class="collapse-item" href="cards.html">Temp</a>
+                        <a class="collapse-item" href="javascript:void(0);" id="spider-weibo">Weibo</a>
+                        <a class="collapse-item" href="javascript:void(0);" id="spider-temp">Temp</a>
                     </div>
                 </div>
             </li>
@@ -88,7 +94,7 @@
 
             <!-- Nav Item - Bar-Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="javascript:void(0);" id="charts-bar">
                     <i class="fas fa-fw fa-bar-chart"></i>
                     <span>Bar-Charts</span></a>
             </li>
@@ -103,16 +109,16 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Table:</h6>
-                        <a class="collapse-item" href="buttons.html">index</a>
-                        <a class="collapse-item" href="cards.html">comment</a>
-                        <a class="collapse-item" href="cards.html">user</a>
+                        <a class="collapse-item" href="javascript:void(0);" id="tables-index">index</a>
+                        <a class="collapse-item" href="javascript:void(0);" id="tables-comment">comment</a>
+                        <a class="collapse-item" href="javascript:void(0);" id="tables-user">user</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Pie-Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="javascript:void(0);" id="charts-pie">
                     <i class="fas fa-fw fa-pie-chart"></i>
                     <span>Pie-Charts</span></a>
             </li>
@@ -126,7 +132,7 @@
 
             <!-- Nav Item - Options -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="javascript:void(0);" id="config">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Options</span></a>
             </li>
@@ -347,61 +353,93 @@
     <script src="vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-    <!-- Page level plugins -->
-    <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
-
-    <!-- Page level custom scripts -->
-    <!-- <script src="js/demo/chart-area-demo.js"></script> -->
-    <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
 
 </body>
 
 
 <!-- when show -->
 
-    <!-- toastr -->
-    <script>
-        $(function () {
-
-            //参数设置，若用默认值可以省略以下面代
-
-            toastr.options = {
-
-                "closeButton": false, //是否显示关闭按钮
-
-                "debug": false, //是否使用debug模式
-
-                "positionClass": "toast-top-full-width", //弹出窗的位置
-
-                "showDuration": "300", //显示的动画时间
-
-                "hideDuration": "1000", //消失的动画时间
-
-                "timeOut": "5000", //展现时间
-
-                "extendedTimeOut": "1000", //加长展示时间
-
-                "showEasing": "swing", //显示时的动画缓冲方式
-
-                "hideEasing": "linear", //消失时的动画缓冲方式
-
-                "showMethod": "fadeIn", //显示时的动画方式
-
-                "hideMethod": "fadeOut" //消失时的动画方式
-
-            };
-        })
-    </script>
-
-<!-- Event Script-->
-
+<!-- toastr -->
 <script>
     $(function () {
 
-        // load container
-        $("#container").load('table_index.html');
+        //参数设置，若用默认值可以省略以下面代
 
+        toastr.options = {
+
+            "closeButton": false, //是否显示关闭按钮
+
+            "debug": false, //是否使用debug模式
+
+            "positionClass": "toast-top-full-width", //弹出窗的位置
+
+            "showDuration": "300", //显示的动画时间
+
+            "hideDuration": "1000", //消失的动画时间
+
+            "timeOut": "5000", //展现时间
+
+            "extendedTimeOut": "1000", //加长展示时间
+
+            "showEasing": "swing", //显示时的动画缓冲方式
+
+            "hideEasing": "linear", //消失时的动画缓冲方式
+
+            "showMethod": "fadeIn", //显示时的动画方式
+
+            "hideMethod": "fadeOut" //消失时的动画方式
+
+        };
     })
+</script>
+
+<!-- Event Script-->
+<script>
+    $(function () {
+        // load container
+        $("#container").load('./container/index.html');
+    });
+
+    $("#sidebar-index").click(function () {
+        $("#container").load('./container/index.html');
+    });
+
+    $("#nav-link-index").click(function () {
+        $("#container").load('./container/index.html');
+    });
+
+    $("#spider-weibo").click(function () {
+        $("#container").load('./container/spider_weibo.html');
+    });
+
+    $("#spider-temp").click(function () {
+        $("#container").load('./container/spider_temp.html');
+    });
+
+    $("#charts-bar").click(function () {
+        $("#container").load('./container/charts_bar.html');
+    });
+
+    $("#tables-index").click(function () {
+        $("#container").load('./container/tables_index.html');
+    });
+
+    $("#tables-comment").click(function () {
+        $("#container").load('./container/tables_comment.html');
+    });
+
+    $("#tables-user").click(function () {
+        $("#container").load('./container/tables_user.html');
+    });
+
+    $("#charts-pie").click(function () {
+        $("#container").load('./container/charts-pie.html');
+    });
+
+    $("#config").click(function () {
+        $("#container").load('./container/config.html');
+    });
+
 </script>
 
 </html>

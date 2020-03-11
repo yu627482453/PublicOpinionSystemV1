@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa76c31b-e038-4b21-8ed8-04af778a1fd3" name="Default Changelist" comment="" />
+    <list default="true" id="fa76c31b-e038-4b21-8ed8-04af778a1fd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/container/charts_bar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/container/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/container/tables_comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/container/tables_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/container/tables_user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/forgot-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dataprocessing/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dataprocessing/ads_point.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/table_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/tables_comment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/src/main/resources/static/tables_user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/table_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/tables_comment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/tables_user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dataprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../dataprocessing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dataprocessing/ads_keyword.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dataprocessing/ads_keyword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dataprocessing/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dataprocessing/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,12 +42,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/weibo/pipelines.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/weibo/SpiderUtils.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/weibo/spiders/DailySpider.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1YWWK2Ki2EOJZVx3buYBHyMu28m" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,6 +59,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../PublicOpinionSystemV1/code/spider" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>

@@ -23,15 +23,6 @@ class ADSKeyword(object):
         self._mysql_utils = MysqlUtils()
         self._mysql_utils.open()
 
-    def _get_keyword0(self) -> ((), ()):
-        result = self._mysql_utils.select(table="keyword", col="keyword", condition="where 1=1")
-        return result
-
-    def _set_keyword0(self, keyword):
-        for item in keyword:
-            self._mysql_utils.insert(table=ads_table, col=ads_keyword,
-                                     value=" \"" + item[0] + "\" , 0, 0")
-
     def _get_keyword(self, table):
         result = self._mysql_utils.select(table=table, col="text, attitudes_count", condition="where 1=1")
         return result
@@ -70,11 +61,11 @@ class ADSKeyword(object):
         :return:
         """
 
-        # # 1 获取keyword
-        keyword = self._get_keyword0()
-        self._set_keyword0(keyword)
+        # # 0 清空表中数据
 
-        # # 2 获取text, attitudes_count : day, hour, yes_day, last_day, week
+        self._mysql_utils.truncate("ads_keyword")
+
+        # # 1 获取text, attitudes_count : day, hour, yes_day, last_day, week
 
         # ## 1 day
         keyword = self._get_keyword("day")

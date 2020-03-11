@@ -15,7 +15,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Bar day</h6>
             </div>
             <div class="card-body">
-                <div class="chart-area" id="bar_charts_day">
+                <div class="chart-area" id="day-bar-chart">
                 </div>
                 <hr>
                 日热点柱状图.
@@ -33,10 +33,72 @@
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                <div class="chart-pie pt-4" id="word_charts_day">
+                <div class="chart-pie pt-4" id="day-word-chart">
                 </div>
                 <hr>
                 日热点词云图.
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-8 col-lg-7">
+        <!-- Area Chart -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Bar hour</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-area" id="hour-bar-chart">
+                </div>
+                <hr>
+                时热点柱状图.
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-5">
+        <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">WordCloud hour</h6>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+                <div class="chart-pie pt-4" id="hour-word-chart">
+                </div>
+                <hr>
+                时热点词云图.
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-8 col-lg-7">
+        <!-- Area Chart -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Bar week</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-area" id="week-bar-chart">
+                </div>
+                <hr>
+                周热点柱状图.
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-5">
+        <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">WordCloud week</h6>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+                <div class="chart-pie pt-4" id="week-word-chart">
+                </div>
+                <hr>
+                周热点词云图.
             </div>
         </div>
     </div>
@@ -49,7 +111,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Bar yes_day</h6>
             </div>
             <div class="card-body">
-                <div class="chart-area" id="bar_charts_yes_day">
+                <div class="chart-area" id="yes-day-bar-chart">
                 </div>
                 <hr>
                 昨日日热点柱状图.
@@ -66,7 +128,7 @@
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                <div class="chart-pie pt-4" id="word_charts_yes_day">
+                <div class="chart-pie pt-4" id="yes-day-word-chart">
                 </div>
                 <hr>
                 昨日日热点词云图.
@@ -81,7 +143,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Bar last_day</h6>
             </div>
             <div class="card-body">
-                <div class="chart-area" id="bar_charts_last_day">
+                <div class="chart-area" id="last-day-bar-chart">
                 </div>
                 <hr>
                 前日日热点柱状图.
@@ -97,7 +159,7 @@
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                <div class="chart-pie pt-4" id="word_charts_last_day">
+                <div class="chart-pie pt-4" id="last-day-word-chart">
                 </div>
                 <hr>
                 前日日热点词云图.
@@ -108,8 +170,7 @@
 </div>
 
 <script type="text/javascript">
-    function draw_bar_charts(app, id, x_axis, data1, data2, data3) {
-
+    function drawBarCharts(app, id, x_axis, data1, data2, data3) {
         if (app != null && app != "" && app != undefined) {
             app.dispose();
         }
@@ -235,6 +296,13 @@
                     }
                 }
             },
+            dataZoom: [{
+                type: 'slider',
+                show: true,
+                realtime: true,
+                start: 0,
+                end: 20,
+            }],
             xAxis: [{
                 type: 'category',
                 axisTick: {
@@ -268,10 +336,9 @@
         };
 
         app.setOption(option);
-    }
+    };
 
-
-    function draw_word_charts(app, id, data, img) {
+    function drawWordCharts(app, id, keywords, img) {
 
         var app = echarts.init(document.getElementById(id));
 
@@ -282,13 +349,13 @@
         //     "series": 274470,
         // };
 
-        // var data = [];
-        // for (var name in keywords) {
-        //     data.push({
-        //         name: name,
-        //         value: Math.sqrt(keywords[name])
-        //     })
-        // }
+        var data = [];
+        for (var name in keywords) {
+            data.push({
+                name: name,
+                value: Math.sqrt(keywords[name])
+            })
+        }
 
         var maskImage = new Image();
         maskImage.src = './img/logo.png';
@@ -296,10 +363,10 @@
         var option = {
             series: [{
                 type: 'wordCloud',
-                sizeRange: [10, 100],
+                sizeRange: [14, 55],
                 rotationRange: [-90, 90],
                 rotationStep: 45,
-                gridSize: 2,
+                gridSize: 1,
                 shape: 'pentagon',
                 maskImage: maskImage,
                 drawOutOfBound: false,
@@ -327,39 +394,184 @@
             option.series[0].maskImage
             app.setOption(option);
         }
+    };
 
-    }
+    function showDay() {
+
+        $.ajax({
+            type: "get",
+            url: "chart/daybarchart",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    var app01;
+                    drawBarCharts(app01, "day-bar-chart", value.x, value.data1, value.data2, value.data3);
+                }
+            }
+
+        });
+
+
+        $.ajax({
+            type: "get",
+            url: "chart/daywordchart",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+
+            success: function (result) {
+                if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    var app02;
+                    drawWordCharts(app02, "day-word-chart", value, "../img/logo.png");
+                }
+            }
+        });
+    };
+
+    function showHour() {
+
+        $.ajax({
+            type: "get",
+            url: "chart/hourbarchart",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    var app11;
+                    drawBarCharts(app11, "hour-bar-chart", value.x, value.data1, value.data2, value.data3);
+                }
+            }
+
+        });
+
+
+        $.ajax({
+            type: "get",
+            url: "chart/hourwordchart",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+
+            success: function (result) {
+                if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    var app12;
+                    drawWordCharts(app12, "hour-word-chart", value, "../img/logo.png");
+                }
+            }
+        });
+    };
+
+    function showWeek() {
+
+        $.ajax({
+            type: "get",
+            url: "chart/weekbarchart",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    var app21;
+                    drawBarCharts(app21, "week-bar-chart", value.x, value.data1, value.data2, value.data3);
+                }
+            }
+
+        });
+
+
+        $.ajax({
+            type: "get",
+            url: "chart/weekwordchart",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+
+            success: function (result) {
+                if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    var app22;
+                    drawWordCharts(app22, "week-word-chart", value, "../img/logo.png");
+                }
+            }
+        });
+    };
+
+    function showLastDay() {
+
+        $.ajax({
+            type: "get",
+            url: "chart/lastdaybarchart",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    var app31;
+                    drawBarCharts(app31, "last-day-bar-chart", value.x, value.data1, value.data2, value
+                        .data3);
+                }
+            }
+
+        });
+
+
+        $.ajax({
+            type: "get",
+            url: "chart/lastdaywordchart",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+
+            success: function (result) {
+                if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    var app32;
+                    drawWordCharts(app32, "last-day-word-chart", value, "../img/logo.png");
+                }
+            }
+        });
+    };
+
+    function showYesDay() {
+
+        $.ajax({
+            type: "get",
+            url: "chart/yesdaybarchart",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    var app41;
+                    drawBarCharts(app41, "yes-day-bar-chart", value.x, value.data1, value.data2, value.data3);
+                }
+            }
+
+        });
+
+
+        $.ajax({
+            type: "get",
+            url: "chart/yesdaywordchart",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+
+            success: function (result) {
+                if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    var app42;
+                    drawWordCharts(app42, "yes-day-word-chart", value, "../img/logo.png");
+                }
+            }
+        });
+    };
 
     $(function () {
-        var app;
-        draw_bar_charts(app, "bar_charts_day", ['1', '2', '3'], [100, 100, 100], [200, 240, 500], [300, 300,
-            300]);
-
-        var keywords = {
-            "visualMap": 22199,
-            "continuous": 10288,
-            "contoller": 620,
-            "series": 274470,
-        };
-
-        var data = [];
-        for (var name in keywords) {
-            data.push({
-                name: name,
-                value: Math.sqrt(keywords[name])
-            })
-        }
-
-        var app1;
-        draw_word_charts(app1, "word_charts_day", data, "./img/logo.png");
-
-        var app2;
-        draw_bar_charts(app2, "bar_charts_yes_day", ['1', '2', '3'], [100, 100, 100], [200, 240, 500], [300, 300,
-            300]);
-
-        
-        var app3;
-        draw_word_charts(app3, "word_charts_yes_day", data, "./img/logo5.png");
-
+        showDay();
+        showHour();
+        showWeek();
+        showYesDay();
+        showLastDay();
     })
 </script>

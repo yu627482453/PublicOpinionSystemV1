@@ -4,32 +4,70 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f418dd3c-32ef-4db1-b608-095d8a8f19cf" name="Default Changelist" comment="finish login register">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/controller/RegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dto/MsgDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/utils/encryutils/EncryUitls.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/toastr/toastr.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/toastr/toastr.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/toastr/toastr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/nex/service/web/impl/SysUserServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="f418dd3c-32ef-4db1-b608-095d8a8f19cf" name="Default Changelist" comment="finish index charts">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/controller/ChartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dao/KeyWordRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dao/PointRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dao/blog/DayBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dao/blog/HourBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dao/blog/LastDayBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dao/blog/WeekBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dao/blog/YesDayBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dto/BarChartDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dto/FieldDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/entity/KeyWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/entity/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/entity/blog/DayBlog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/entity/blog/HourBlog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/entity/blog/LastDayBlog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/entity/blog/WeekBlog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/entity/blog/YesDayBlog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/KeyWordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/PointService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/blog/DayBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/blog/HourBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/blog/LastDayBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/blog/WeekBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/blog/YesDayBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/blog/impl/DayBlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/blog/impl/HourBlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/blog/impl/LastDayBlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/blog/impl/WeekBlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/blog/impl/YesDayBlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/impl/KeyWordServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/impl/PointServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/container/charts_bar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/container/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/container/tables_comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/container/tables_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/container/tables_user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/forgot-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spider/weiboSpider/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dataprocessing/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dataprocessing/ads_point.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/dao/SysUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nex/dao/SysUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/dto/MsgDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nex/dto/MsgDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/entity/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nex/entity/SysUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/web/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/BaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/web/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/SysUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/web/impl/BaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/impl/BaseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/charts.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/table_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/tables_comment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/tables_user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/charts.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index2.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/table_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/tables_comment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/tables_user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spider/weiboSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spider/weiboSpider/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dataprocessing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataprocessing/ads_keyword.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dataprocessing/ads_keyword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataprocessing/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dataprocessing/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +77,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -50,7 +88,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/nex/service/web/BaseService.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/nex/dao/SysUserRepository.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/nex/dao/SysUserRepository.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/nex/service/telnet/SFTPService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/nex/utils/SFTPUtil.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/nex/service/telnet/BaseTelnetService.java" root0="SKIP_INSPECTION" />
@@ -223,20 +261,28 @@
       <option name="project" value="LOCAL" />
       <updated>1583831083530</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="finish login register">
+      <created>1583888535305</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583888535306</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="finish BaseService" />
     <MESSAGE value="finish login register" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish login register" />
+    <MESSAGE value="finish index charts" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish index charts" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#Auto_Import" timestamp="1583113333696">
+    <state x="361" y="71" key="#Auto_Import" timestamp="1583895188931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="71" key="#Auto_Import/0.0.1536.824@0.0.1536.824" timestamp="1583113333696" />
+    <state x="361" y="71" key="#Auto_Import/0.0.1536.824@0.0.1536.824" timestamp="1583895188931" />
     <state x="361" y="70" key="#Custom_Plugin_Repositories" timestamp="1583821900887">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -253,10 +299,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583291435603" />
-    <state x="190" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1583846136438">
+    <state x="190" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1583924384706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="190" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1583846136438" />
+    <state x="190" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1583924384706" />
     <state x="499" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583291558878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -269,14 +315,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="271" width="439" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1583124284072" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583126031588">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583924934786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583126031588" />
-    <state x="308" y="4" key="CommitChangelistDialog2" timestamp="1583888452587">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583924934786" />
+    <state x="308" y="4" key="CommitChangelistDialog2" timestamp="1583926791972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="308" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583888452587" />
+    <state x="308" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583926791972" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1583824342902">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -285,22 +331,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583817610994" />
-    <state width="1493" height="331" key="GridCell.Tab.0.bottom" timestamp="1583888517540">
+    <state width="1493" height="229" key="GridCell.Tab.0.bottom" timestamp="1583926792423">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="331" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583888517540" />
-    <state width="1493" height="331" key="GridCell.Tab.0.center" timestamp="1583888517540">
+    <state width="1493" height="229" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583926792423" />
+    <state width="1493" height="229" key="GridCell.Tab.0.center" timestamp="1583926792420">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="331" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583888517540" />
-    <state width="1493" height="331" key="GridCell.Tab.0.left" timestamp="1583888517540">
+    <state width="1493" height="229" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583926792420" />
+    <state width="1493" height="229" key="GridCell.Tab.0.left" timestamp="1583926792419">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="331" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583888517540" />
-    <state width="1493" height="331" key="GridCell.Tab.0.right" timestamp="1583888517540">
+    <state width="1493" height="229" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583926792419" />
+    <state width="1493" height="229" key="GridCell.Tab.0.right" timestamp="1583926792420">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="331" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583888517540" />
+    <state width="1493" height="229" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583926792420" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1583136407950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -329,10 +375,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583831087880" />
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583884284563">
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583894594370">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583884284563" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583894594370" />
     <state x="533" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583834277293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

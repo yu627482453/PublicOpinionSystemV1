@@ -14,21 +14,21 @@ import java.io.Serializable;
  * @version: V1.0
  */
 @Entity
-@Table(name="sys_user")
+@Table(name = "sys_user")
 public class SysUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GenericGenerator(name = "systemUUID", strategy = "uuid")
-    @GeneratedValue(generator="systemUUID")
-    @Column(name="id", length=32)
+    @GeneratedValue(generator = "systemUUID")
+    @Column(name = "id", length = 32)
     private String id;
-    @Column(name="username", length = 100)
+    @Column(name = "username", length = 100)
     private String username;
-    @Column(name="password", length = 100)
+    @Column(name = "password", length = 100)
     private String password;
-    @Column(name="email", length = 100)
+    @Column(name = "email", length = 100)
     private String email;
 
     public String getId() {

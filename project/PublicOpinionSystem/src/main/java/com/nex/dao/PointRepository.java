@@ -1,19 +1,21 @@
 package com.nex.dao;
 
-import com.nex.entity.SysUser;
+import com.nex.entity.Point;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @Project: PublicOpinionSystem
  * @Package: com.nex.dao
- * @Description: SysUser Repository
+ * @Description: Point repository
  * @author: nero
- * @date: 2020年03月10日 14:11
+ * @date: 2020年03月11日 10:47
  * @version: V1.0
  */
 @Repository
-public interface SysUserRepository extends JpaRepository<SysUser, String> {
+public interface PointRepository extends JpaRepository<Point, Integer> {
 
-    SysUser findByUsername(String username);
+    List<Point> findByPart(int part);
 }

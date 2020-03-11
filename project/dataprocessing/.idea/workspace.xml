@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8053861f-e792-45c0-9d60-8fe9bed19e44" name="Default Changelist" comment="" />
+    <list default="true" id="8053861f-e792-45c0-9d60-8fe9bed19e44" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/java/com/nex/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/java/com/nex/dao/PointRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/java/com/nex/dto/FieldDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/java/com/nex/entity/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/java/com/nex/service/web/PointService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/java/com/nex/service/web/impl/PointServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/container/charts_bar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/container/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/container/tables_comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/container/tables_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/container/tables_user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/forgot-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spider/weiboSpider/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads_point.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PublicOpinionSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/java/com/nex/dao/SysUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/java/com/nex/dao/SysUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/java/com/nex/dto/MsgDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/java/com/nex/dto/MsgDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/table_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/tables_comment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/src/main/resources/static/tables_user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/target/classes/static/charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../PublicOpinionSystem/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/target/classes/static/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/target/classes/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../PublicOpinionSystem/target/classes/static/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/target/classes/static/table_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/target/classes/static/tables_comment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PublicOpinionSystem/target/classes/static/tables_user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spider/weiboSpider/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spider/weiboSpider/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads_keyword.py" beforeDir="false" afterPath="$PROJECT_DIR$/ads_keyword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,10 +50,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/MysqlUtils.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1YuvgbPIh1XJpxh5qeb1MeU6BF7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,6 +65,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -150,22 +191,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1583817487729">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1583903297855">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583817487729" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1583817487728">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583903297855" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1583903297854">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583817487728" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1583817487728">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583903297854" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1583903297854">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583817487728" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1583817487728">
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583903297854" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1583903297854">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583817487728" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583903297854" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1583816729749">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -182,10 +223,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583816729749" />
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583817348439">
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583903175652">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583817348439" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583903175652" />
     <state x="333" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1583811964970">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
