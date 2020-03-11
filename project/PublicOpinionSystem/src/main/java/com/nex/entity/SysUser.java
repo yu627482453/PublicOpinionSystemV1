@@ -1,9 +1,8 @@
 package com.nex.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -21,13 +20,15 @@ public class SysUser implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Column(name="id")
+    @GenericGenerator(name = "systemUUID", strategy = "uuid")
+    @GeneratedValue(generator="systemUUID")
+    @Column(name="id", length=32)
     private String id;
-    @Column(name="username")
+    @Column(name="username", length = 100)
     private String username;
-    @Column(name="password")
+    @Column(name="password", length = 100)
     private String password;
-    @Column(name="email")
+    @Column(name="email", length = 100)
     private String email;
 
     public String getId() {

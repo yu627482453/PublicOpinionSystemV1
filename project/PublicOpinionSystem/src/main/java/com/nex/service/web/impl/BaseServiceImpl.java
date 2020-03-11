@@ -20,15 +20,7 @@ public abstract class BaseServiceImpl<T, E> implements BaseService<T, E> {
     private JpaRepository<T, E> baseRepository = null;
 
     /**
-     * Constructor
-     * @param baseRepository jpaRepository
-     */
-    public BaseServiceImpl(JpaRepository<T, E> baseRepository) {
-        this.setRepository(baseRepository);
-    }
-
-    /**
-     *  set the repository
+     * @Description: set the repository
      * @param jpaRepository jpaRepository
      */
     @Override
@@ -37,7 +29,7 @@ public abstract class BaseServiceImpl<T, E> implements BaseService<T, E> {
     }
 
     /**
-     * query vo
+     * @Description: query vo
      * @param id id
      * @return vo (Entity)
      */
@@ -48,7 +40,7 @@ public abstract class BaseServiceImpl<T, E> implements BaseService<T, E> {
     }
 
     /**
-     * query vos
+     * @Description: query vos
      * @param ids E[] ids
      * @return list<VO>
      */
@@ -66,7 +58,7 @@ public abstract class BaseServiceImpl<T, E> implements BaseService<T, E> {
     }
 
     /**
-     * delete the vo
+     * @Description: delete the vo
      * @param vo vo -> Entity
      * @return boolean
      */
@@ -82,7 +74,7 @@ public abstract class BaseServiceImpl<T, E> implements BaseService<T, E> {
     }
 
     /**
-     * delete vos
+     * @Description: delete vos
      * @param vos vos -> list<Entity>
      */
     @Override
@@ -93,7 +85,7 @@ public abstract class BaseServiceImpl<T, E> implements BaseService<T, E> {
     }
 
     /**
-     * update vo
+     * @Description: update vo
      * @param vo vo -> Entity
      * @return boolean
      */
@@ -109,7 +101,7 @@ public abstract class BaseServiceImpl<T, E> implements BaseService<T, E> {
     }
 
     /**
-     * updateAll vos
+     * @Description: updateAll vos
      * @param vos List<Entity>
      */
     @Override
@@ -120,6 +112,11 @@ public abstract class BaseServiceImpl<T, E> implements BaseService<T, E> {
         }
     }
 
+    /**
+     * @Description: if exists
+     * @param id id -> Entity
+     * @return boolean
+     */
     @Override
     public boolean isExist(E id) {
         if (this.baseRepository.findById(id) != null) {
