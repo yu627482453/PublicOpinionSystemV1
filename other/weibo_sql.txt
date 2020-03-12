@@ -425,7 +425,7 @@ statuses_count statuses_count,
 verified verified,
 verified_reason verified_reason,
 description description,
-if(gender=1, '男', '女') gender,
+gender gender,
 followers_count followers_count,
 follow_count follow_count,
 text text

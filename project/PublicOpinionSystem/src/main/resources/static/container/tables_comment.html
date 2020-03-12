@@ -30,14 +30,8 @@
                       <th>所评论内容</th>
                     </tr>
                   </tfoot>
-                  <tbody id="table_index">
-                    <tr>
-                      <td>Donna Snider</td>
-                      <td>Customer Support</td>
-                      <td>New York</td>
-                      <td>27</td>
-                      <td>2011/01/25</td>
-                    </tr>
+                  <tbody id="table-comment">
+                    
                   </tbody>
                 </table>
               </div>
@@ -62,8 +56,22 @@
 
             $(function () {
 
+              $.ajax({
+                type: "get",
+                url: "table/dailycommenttable",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
 
+                success: function (result) {
+                  if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    var text = addTable(value);
 
+                    $("#table-comment").html(text);
+
+                  }
+                }
+              });
 
             })
           </script>
