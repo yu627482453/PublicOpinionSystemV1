@@ -4,58 +4,17 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f418dd3c-32ef-4db1-b608-095d8a8f19cf" name="Default Changelist" comment="finish index charts">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/controller/TableController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dao/daily/DailyBlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dao/daily/DailyCommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dao/daily/DailyUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dto/daily/DailyBlogDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dto/daily/DailyCommentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/dto/daily/DailyUserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/entity/daily/DailyBlog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/entity/daily/DailyComment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/entity/daily/DailyUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/daily/DailyBlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/daily/DailyCommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/daily/DailyUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/daily/impl/DailyBlogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/daily/impl/DailyCommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/daily/impl/DailyUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/container/spider_weibo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../other/weibo_sql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../other/weibo_sql.txt" afterDir="false" />
+    <list default="true" id="f418dd3c-32ef-4db1-b608-095d8a8f19cf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/nex/service/web/SysUserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/constant/GlobalConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/controller/spider/BaseSpiderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/controller/spider/WeiboSpiderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/spider/BaseSpiderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/spider/WeiboSpiderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/spider/impl/BaseSpiderServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/spider/impl/WeiboSpiderServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/telnet/BaseTelnetService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/telnet/SFTPService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/telnet/impl/BaseTelnetServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/telnet/impl/SFTPServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/utils/iniutils/MyIniUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/container/tables_comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/container/tables_comment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/container/tables_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/container/tables_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/container/tables_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/container/tables_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nex/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nex/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/web/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nex/service/web/impl/BaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nex/service/web/impl/BaseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/nex/constant/GlobalConstantTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/nex/service/spider/impl/WeiboSpiderServiceImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/nex/service/telnet/impl/SFTPServiceImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/nex/service/web/impl/SysUserServiceImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/nex/utils/SFTPUtilTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/nex/utils/executorutils/LocalCommandExecutorImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/nex/utils/iniutils/IniUtilTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/nex/utils/iniutils/MyIniUtilTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nex/constant/GlobalConstantTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nex/service/spider/impl/WeiboSpiderServiceImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nex/service/telnet/impl/SFTPServiceImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nex/utils/SFTPUtilTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nex/utils/executorutils/LocalCommandExecutorImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nex/utils/iniutils/IniUtilTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nex/utils/iniutils/MyIniUtilTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -120,11 +79,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.nex.service.web" />
       <recent name="com.nex.service.web.impl" />
       <recent name="com.nex.service.spider.impl" />
       <recent name="com.nex.service.telnet.impl" />
       <recent name="com.nex.utils.executorutils" />
-      <recent name="com.nex.utils" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.nex.utils.iniutils" />
@@ -147,22 +106,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SFTPServiceImplTest.uploadDirFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PublicOpinionSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.nex.service.telnet.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.nex.service.telnet.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.nex.service.telnet.impl.SFTPServiceImplTest" />
-      <option name="METHOD_NAME" value="uploadDirFiles" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -199,17 +142,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeiboSpiderServiceImplTest.crawlIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SysUserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PublicOpinionSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.nex.service.spider.impl.*" />
+          <option name="PATTERN" value="com.nex.service.web.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.nex.service.spider.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.nex.service.spider.impl.WeiboSpiderServiceImplTest" />
-      <option name="METHOD_NAME" value="crawlIndex" />
+      <option name="PACKAGE_NAME" value="com.nex.service.web" />
+      <option name="MAIN_CLASS_NAME" value="com.nex.service.web.SysUserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SysUserServiceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PublicOpinionSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nex.service.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nex.service.web" />
+      <option name="MAIN_CLASS_NAME" value="com.nex.service.web.SysUserServiceTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -218,10 +176,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.SysUserServiceTest.test" />
+        <item itemvalue="JUnit.SysUserServiceTest" />
         <item itemvalue="JUnit.SysUserServiceImplTest.login" />
         <item itemvalue="JUnit.SysUserServiceImplTest.register" />
-        <item itemvalue="JUnit.SFTPServiceImplTest.uploadDirFiles" />
-        <item itemvalue="JUnit.WeiboSpiderServiceImplTest.crawlIndex" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583926888728</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Base finish">
+      <created>1583980735859</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583980735859</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -288,7 +253,8 @@
     <MESSAGE value="finish BaseService" />
     <MESSAGE value="finish login register" />
     <MESSAGE value="finish index charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish index charts" />
+    <MESSAGE value="Base finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base finish" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Auto_Import" timestamp="1583895188931">
@@ -331,10 +297,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583977852957" />
-    <state x="308" y="4" key="CommitChangelistDialog2" timestamp="1583980714657">
+    <state x="308" y="4" key="CommitChangelistDialog2" timestamp="1583980734226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="308" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583980714657" />
+    <state x="308" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583980734226" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1583824342902">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -343,22 +309,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583817610994" />
-    <state width="1493" height="229" key="GridCell.Tab.0.bottom" timestamp="1583979584959">
+    <state width="1493" height="229" key="GridCell.Tab.0.bottom" timestamp="1583989457061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="229" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583979584959" />
-    <state width="1493" height="229" key="GridCell.Tab.0.center" timestamp="1583979584958">
+    <state width="1493" height="229" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583989457061" />
+    <state width="1493" height="229" key="GridCell.Tab.0.center" timestamp="1583989457061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="229" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583979584958" />
-    <state width="1493" height="229" key="GridCell.Tab.0.left" timestamp="1583979584955">
+    <state width="1493" height="229" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583989457061" />
+    <state width="1493" height="229" key="GridCell.Tab.0.left" timestamp="1583989457060">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="229" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583979584955" />
-    <state width="1493" height="229" key="GridCell.Tab.0.right" timestamp="1583979584958">
+    <state width="1493" height="229" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583989457060" />
+    <state width="1493" height="229" key="GridCell.Tab.0.right" timestamp="1583989457061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="229" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583979584958" />
+    <state width="1493" height="229" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583989457061" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1583136407950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -391,10 +357,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583976527180" />
-    <state x="533" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583834277293">
+    <state x="533" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583987687437">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="533" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1583834277293" />
+    <state x="533" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1583987687437" />
     <state x="178" y="107" key="new project wizard" timestamp="1583327562940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

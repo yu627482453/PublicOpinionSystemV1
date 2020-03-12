@@ -8,6 +8,8 @@ import com.nex.service.web.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
+
 /**
  * @Project: PublicOpinionSystem
  * @Package: com.nex.controller
@@ -24,7 +26,7 @@ public class LoginController {
     private SysUserService sysUserService;
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public Object login(@RequestBody JSONObject jsonUserDTO) {
+    public Object login(@RequestBody JSONObject jsonUserDTO, HttpSession session) {
 
         try {
             String username = jsonUserDTO.get("username").toString();
@@ -34,6 +36,8 @@ public class LoginController {
 
             if (vo != null) {
                 UserDTO user = new UserDTO(vo.getId(), vo.getUsername());
+                session.setAttribute("userid", vo.getId());
+                session.setAttribute("username", vo.getUsername());
                 MsgDTO msg = MsgDTO.success("succeed to login !", "/index.html");
                 return JSONObject.toJSONString(msg);
             }

@@ -1,6 +1,5 @@
 package com.nex.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.nex.dto.BarChartDTO;
@@ -8,14 +7,16 @@ import com.nex.dto.FieldDTO;
 import com.nex.dto.MsgDTO;
 import com.nex.entity.KeyWord;
 import com.nex.entity.Point;
+import com.nex.entity.SysUser;
 import com.nex.entity.blog.DayBlog;
 import com.nex.service.web.KeyWordService;
 import com.nex.service.web.PointService;
+import com.nex.service.web.SysUserService;
 import com.nex.service.web.blog.DayBlogService;
-import org.apache.avro.data.Json;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -34,11 +35,34 @@ import java.util.Map;
 public class IndexController {
 
     @Autowired
+    private SysUserService sysUserService;
+    @Autowired
     private PointService pointService;
     @Autowired
     private KeyWordService keyWordService;
     @Autowired
     private DayBlogService dayBlogService;
+
+    @GetMapping(value = "/show")
+    public Object show(HttpSession session){
+
+        try {
+            String userId = (String) session.getAttribute("userid");
+            String username = (String) session.getAttribute("username");
+            SysUser vo = sysUserService.queryVO(userId);
+            assert vo != null;
+            if (vo.getUsername().equals(username)) {
+                MsgDTO msg = MsgDTO.success("success");
+                return JSONObject.toJSONString(msg);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        MsgDTO msg = MsgDTO.failure(304, "failure");
+        return JSONObject.toJSONString(msg);
+
+    }
 
     @RequestMapping(value = "/keypoint", method = RequestMethod.GET)
     public Object keyPoint(@RequestParam(value = "count") Integer count){

@@ -1,10 +1,12 @@
 package com.nex.service.web.impl;
 
+import com.nex.entity.SysUser;
 import com.nex.service.web.BaseService;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @Project: PublicOpinionSystem
@@ -35,8 +37,12 @@ public abstract class BaseServiceImpl<T, E> implements BaseService<T, E> {
      */
     @Override
     public T queryVO(E id) {
-        T vo = (T) baseRepository.findById((E) id);
-        return vo;
+        Optional<T> result = baseRepository.findById((E) id);
+        if (result.isPresent()) {
+            T vo = result.get();
+            return vo;
+        }
+        return null;
     }
 
     /**
@@ -47,7 +53,7 @@ public abstract class BaseServiceImpl<T, E> implements BaseService<T, E> {
     @Override
     public List<T> queryAll(E[] ids) {
 
-        List<T> vos = new ArrayList<T>();
+        List<T> vos = new ArrayList<>();
 
         for (E id : ids){
             T vo = this.queryVO(id);
