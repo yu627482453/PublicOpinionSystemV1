@@ -1,0 +1,63 @@
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">WeiboSpider</h1>
+</div>
+
+<div class="row">
+
+    <div class="col-lg-12">
+
+        <!-- Default Card Example -->
+        <div class="card mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Search</h6>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                        aria-label="Search" aria-describedby="basic-addon2" id="weibo-spider-search-input">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="weibo-spider-search">
+                            <i class="fas fa-search fa-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Basic Card Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Crawl</h6>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Crawl..."
+                        aria-label="Search" aria-describedby="basic-addon2" id="weibo-spider-crawl-input">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="weibo-spider-crawl">
+                            <i class="fas fa-search fa-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+    $("#weibo-spider-search").click(function () {
+
+        var pageUrl = "https://m.weibo.cn/detail/";
+
+        weiboId = $("#weibo-spider-search-input").val();
+
+        var finalUrl = pageUrl + weiboId;
+
+        window.open(finalUrl);
+
+    })
+</script>

@@ -1,0 +1,77 @@
+          <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800">Tables-Index</h1>
+          <p class="mb-4">大数据收集数据 article</p>
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Tables-Index</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>id</th>
+                      <th>文本内容</th>
+                      <th>转发数</th>
+                      <th>评论数</th>
+                      <th>点赞数</th>
+                      <th>创建时间</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>id</th>
+                      <th>文本内容</th>
+                      <th>转发数</th>
+                      <th>评论数</th>
+                      <th>点赞数</th>
+                      <th>创建时间</th>
+                    </tr>
+                  </tfoot>
+                  <tbody id="table-index">
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            function addTable(data) {
+
+              text = "";
+              for (i = 0; i < data.length; i++) {
+                text += "<tr> \n";
+                text += "<td>" + data[i].id + "</td>\n";
+                text += "<td>" + data[i].text + "</td>\n";
+                text += "<td>" + data[i].reposts_count + "</td>\n";
+                text += "<td>" + data[i].comments_count + "</td>\n";
+                text += "<td>" + data[i].attitudes_count + "</td>\n";
+                text += "<td>" + data[i].created_at + "</td>\n";
+              }
+
+              return text;
+            };
+
+            $(function () {
+
+              $.ajax({
+                type: "get",
+                url: "table/dailyblogtable",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+
+                success: function(result){
+                  if (result.code == 200){
+                    var value = JSON.parse(result.value);
+                    var text = addTable(value);
+
+                    $("#table-index").html(text);
+
+                  }
+                }
+              });
+
+            })
+          </script>

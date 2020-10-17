@@ -1,0 +1,589 @@
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">PUBLIC OPINION SYSTEM</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- weibo cards -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">热点</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="keypoint0"></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Temp cards -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">热点</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="keypoint1"></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Temp cards -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">热点</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="keypoint2"></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">热点</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="keypoint3"></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+
+          <div class="row">
+
+            <!-- Area Chart -->
+            <!-- 榜单柱状图 -->
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">榜单柱状图</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-area" id="day-bar-chart">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <!-- 词云图 -->
+            <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">词云图</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2" id="day-word-chart">
+                  </div>
+                  <div class="mt-4 text-center small">
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-primary"></i> Direct
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-success"></i> Social
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-info"></i> Referral
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Content Column -->
+            <div class="col-lg-6 mb-4">
+
+
+              <!-- Color System -->
+              <!-- articles -->
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-primary text-white shadow">
+                    <div class="card-body" id="point0">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-success text-white shadow">
+                    <div class="card-body" id="point1">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-info text-white shadow">
+                    <div class="card-body" id="point2">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-warning text-white shadow">
+                    <div class="card-body" id="point3">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-danger text-white shadow">
+                    <div class="card-body" id="point4">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-secondary text-white shadow">
+                    <div class="card-body" id="point5">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-success text-white shadow">
+                    <div class="card-body" id="point6">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-primary text-white shadow">
+                    <div class="card-body" id="point7">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-warning text-white shadow">
+                    <div class="card-body" id="point8">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-info text-white shadow">
+                    <div class="card-body" id="point9">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-6 mb-4">
+
+              <!-- Illustrations -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">README</h6>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                      src="img/undraw_posting_photo.svg" alt="">
+                  </div>
+                  <p> 网站意在处理各大论坛数据， 对数据进行清洗、收集、处理， 实现数据的收集自动化，数据可视化。 </p>
+                  <p> 该项目仍处在测试阶段，仍存在些许bug。还望谅解。</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Custom scripts for all pages-->
+          <script src="js/sb-admin-2.min.js"></script>
+
+          <!-- Page level plugins -->
+          <script src="vendor/chart.js/Chart.min.js"></script>
+
+          <!-- Page level custom scripts -->
+          <script src="js/demo/chart-area-demo.js"></script>
+          <script src="js/demo/chart-pie-demo.js"></script>
+
+          <!-- load -->
+          <script>
+            function showKeyPoint() {
+
+              var data = {
+                count: 4
+              }
+
+              $.ajax({
+                type: "get",
+                data: data,
+                dataType: "json",
+                url: "index/keypoint",
+                contentType: "application/json; charset=utf-8",
+                success: function (result) {
+                  if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    for (let index = 0; index < data.count; index++) {
+                      $("#keypoint" + index).text(value[index].field);
+                    }
+                  }
+
+                },
+                error: function () {
+                  toastr.error("服务器出错!");
+                }
+
+
+              })
+
+            };
+
+            function showPoint() {
+
+              var data = {
+                count: 10
+              }
+
+              $.ajax({
+                type: "get",
+                data: data,
+                dataType: "json",
+                url: "index/point",
+                contentType: "application/json; charset=utf-8",
+                success: function (result) {
+                  if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    for (let index = 0; index < data.count; index++) {
+                      $("#point" + index).text(value[index].field);
+
+                    }
+                  }
+
+                }
+
+              });
+
+            };
+
+            function drawBarCharts(app, id, x_axis, data1, data2, data3) {
+              if (app != null && app != "" && app != undefined) {
+                app.dispose();
+              }
+
+              var app = echarts.init(document.getElementById(id));
+
+              var posList = [
+                'left', 'right', 'top', 'bottom',
+                'inside',
+                'insideTop', 'insideLeft', 'insideRight', 'insideBottom',
+                'insideTopLeft', 'insideTopRight', 'insideBottomLeft', 'insideBottomRight'
+              ];
+
+              app.configParameters = {
+                rotate: {
+                  min: -90,
+                  max: 90
+                },
+                align: {
+                  options: {
+                    left: 'left',
+                    center: 'center',
+                    right: 'right'
+                  }
+                },
+                verticalAlign: {
+                  options: {
+                    top: 'top',
+                    middle: 'middle',
+                    bottom: 'bottom'
+                  }
+                },
+                position: {
+                  options: echarts.util.reduce(posList, function (map, pos) {
+                    map[pos] = pos;
+                    return map;
+                  }, {})
+                },
+                distance: {
+                  min: 0,
+                  max: 100
+                }
+              };
+
+              app.config = {
+                rotate: 90,
+                align: 'left',
+                verticalAlign: 'middle',
+                position: 'insideBottom',
+                distance: 15,
+                onChange: function () {
+                  var labelOption = {
+                    normal: {
+                      rotate: app.config.rotate,
+                      align: app.config.align,
+                      verticalAlign: app.config.verticalAlign,
+                      position: app.config.position,
+                      distance: app.config.distance
+                    }
+                  };
+                  myChart.setOption({
+                    series: [{
+                      label: labelOption
+                    }, {
+                      label: labelOption
+                    }, {
+                      label: labelOption
+                    }]
+                  });
+                }
+              };
+
+
+              var labelOption = {
+                show: true,
+                position: app.config.position,
+                distance: app.config.distance,
+                align: app.config.align,
+                verticalAlign: app.config.verticalAlign,
+                rotate: app.config.rotate,
+                formatter: '{c}  {name|{a}}',
+                fontSize: 16,
+                rich: {
+                  name: {
+                    textBorderColor: '#fff'
+                  }
+                }
+              };
+
+              option = {
+                color: ['#003366', '#006699', '#e5323e'],
+                tooltip: {
+                  trigger: 'axis',
+                  axisPointer: {
+                    type: 'shadow'
+                  }
+                },
+                legend: {
+                  data: ['转发数', '评论数', '点赞数']
+                },
+                toolbox: {
+                  show: true,
+                  orient: 'vertical',
+                  left: 'right',
+                  top: 'center',
+                  feature: {
+                    mark: {
+                      show: true
+                    },
+                    dataView: {
+                      show: true,
+                      readOnly: false
+                    },
+                    magicType: {
+                      show: true,
+                      type: ['line', 'bar', 'stack', 'tiled']
+                    },
+                    restore: {
+                      show: true
+                    },
+                    saveAsImage: {
+                      show: true
+                    }
+                  }
+                },
+                dataZoom: [{
+                  type: 'slider',
+                  show: true,
+                  realtime: true,
+                  start: 0,
+                  end: 20,
+                }],
+                xAxis: [{
+                  type: 'category',
+                  axisTick: {
+                    show: false
+                  },
+                  data: x_axis
+                }],
+                yAxis: [{
+                  type: 'value'
+                }],
+                series: [{
+                    name: '转发数',
+                    type: 'bar',
+                    barGap: 0,
+                    label: labelOption,
+                    data: data1
+                  },
+                  {
+                    name: '点赞数',
+                    type: 'bar',
+                    label: labelOption,
+                    data: data2
+                  },
+                  {
+                    name: '评论数',
+                    type: 'bar',
+                    label: labelOption,
+                    data: data3
+                  }
+                ]
+              };
+
+              app.setOption(option);
+            };
+
+            function drawWordCharts(app, id, keywords, img) {
+
+              var app = echarts.init(document.getElementById(id));
+
+              // var keywords = {
+              //     "visualMap": 22199,
+              //     "continuous": 10288,
+              //     "contoller": 620,
+              //     "series": 274470,
+              // };
+
+              var data = [];
+              for (var name in keywords) {
+                data.push({
+                  name: name,
+                  value: Math.sqrt(keywords[name])
+                })
+              }
+
+              var maskImage = new Image();
+              maskImage.src = './img/logo.png';
+
+              var option = {
+                series: [{
+                  type: 'wordCloud',
+                  sizeRange: [14, 55],
+                  rotationRange: [-90, 90],
+                  rotationStep: 45,
+                  gridSize: 1,
+                  shape: 'pentagon',
+                  maskImage: maskImage,
+                  drawOutOfBound: false,
+                  textStyle: {
+                    normal: {
+                      color: function () {
+                        return 'rgb(' + [
+                          Math.round(Math.random() * 160),
+                          Math.round(Math.random() * 160),
+                          Math.round(Math.random() * 160)
+                        ].join(',') + ')';
+                      }
+                    },
+                    emphasis: {
+                      color: 'red'
+                    }
+                  },
+                  data: data.sort(function (a, b) {
+                    return b.value - a.value;
+                  })
+                }]
+              };
+
+              maskImage.onload = function () {
+                option.series[0].maskImage
+                app.setOption(option);
+              }
+            };
+
+            function showBar() {
+
+              $.ajax({
+                type: "get",
+                url: "index/barchart",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (result) {
+                  if (result.code == 200) {
+                    var value = JSON.parse(result.value);
+                    var app;
+                    drawBarCharts(app, "day-bar-chart", value.x, value.data1, value.data2, value.data3);
+                  }
+                }
+
+              });
+
+            };
+
+            function showWord() {
+              
+              $.ajax({
+                type: "get",
+                url: "index/wordchart",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (result){
+                  if (result.code == 200){
+                    var value = JSON.parse(result.value);
+                    var app;
+                    drawWordCharts(app, "day-word-chart", value, "../img/logo.png");
+                  }
+                }
+              });
+
+            }
+
+            $(function () {
+              showKeyPoint();
+              showPoint();
+              showBar();
+              showWord();
+            })
+          </script>
