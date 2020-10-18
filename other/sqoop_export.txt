@@ -1,5 +1,5 @@
 /opt/module/sqoop/bin/sqoop export \
---connect "jdbc:mysql://hadoop102:3306/gmall?useUnicode=true&characterEncoding=utf-8"  \
+--connect "jdbc:mysql://hadoop102:3306/gmall?useUnicode=true"  \
 --username root \
 --password 000000 \
 --table ads_index_analysis \
@@ -11,7 +11,7 @@
 
 
 /opt/module/sqoop/bin/sqoop export \
---connect "jdbc:mysql://hadoop102:3306/gmall?useUnicode=true&characterEncoding=utf-8"  \
+--connect "jdbc:mysql://hadoop102:3306/gmall?useUnicode=true"  \
 --username root \
 --password 000000 \
 --table ads_comment_analysis \
@@ -22,7 +22,7 @@
 --input-null-non-string '\\N'
 
 /opt/module/sqoop/bin/sqoop export \
---connect "jdbc:mysql://hadoop102:3306/gmall?useUnicode=true&characterEncoding=utf-8"  \
+--connect "jdbc:mysql://hadoop102:3306/gmall?useUnicode=true"  \
 --username root \
 --password 000000 \
 --table ads_user_analysis \

@@ -27,7 +27,7 @@ OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION '/warehouse/gmall/ods/ods_weibo_index_log';
 
 -- 3.
-load data inpath '/origin_data/gmall/log/weibo/topic_index/2020-03-06' into table gmall.ods_weibo_index_log partition(dt='2020-03-06');
+load data inpath '/origin_data/gmall/log/weibo/topic_index/2020-10-18' into table gmall.ods_weibo_index_log partition(dt='2020-10-18');
 
 
 ------------------------
@@ -46,7 +46,7 @@ OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION '/warehouse/gmall/ods/ods_weibo_comment_log';
 
 -- 3.
-load data inpath '/origin_data/gmall/log/weibo/topic_comment/2020-03-06' into table gmall.ods_weibo_comment_log partition(dt='2020-03-06');
+load data inpath '/origin_data/gmall/log/weibo/topic_comment/2020-10-18' into table gmall.ods_weibo_comment_log partition(dt='2020-10-18');
 
 
 
@@ -89,10 +89,10 @@ create temporary function index_analizer as 'com.nex.weibo.IndexJsonUDTF';
 
 -- 4. 
 insert overwrite table dwd_weibo_index_log
-PARTITION (dt='2020-03-06')
+PARTITION (dt='2020-10-18')
 select index_analizer(line)
 from ods_weibo_index_log
-where dt='2020-03-06';
+where dt='2020-10-18';
 
 
 ---------------------
@@ -123,10 +123,10 @@ create temporary function comment_analizer as 'com.nex.weibo.CommentJsonUDTF';
 
 -- 4.
 insert overwrite table dwd_weibo_comment_log
-PARTITION (dt='2020-03-06')
+PARTITION (dt='2020-10-18')
 select comment_analizer(line)
 from ods_weibo_comment_log
-where dt='2020-03-06';
+where dt='2020-10-18';
 
 
 ---------------------
@@ -165,16 +165,16 @@ create temporary function user_comment_analizer as 'com.nex.weibo.UserCommentJso
 -- 4.
 
 insert overwrite table dwd_weibo_user_log
-PARTITION (dt='2020-03-06')
+PARTITION (dt='2020-10-18')
 select user_index_analizer(line)
 from ods_weibo_index_log
-where dt='2020-03-06';
+where dt='2020-10-18';
 
 insert into table dwd_weibo_user_log
-PARTITION (dt='2020-03-06')
+PARTITION (dt='2020-10-18')
 select user_comment_analizer(line)
 from ods_weibo_comment_log
-where dt='2020-03-06';
+where dt='2020-10-18';
 
 
 ---------------------
@@ -237,7 +237,7 @@ location '/warehouse/gmall/dws/dws_uv_user_day/';
 -- 插入数据
 ----------------------------
 insert overwrite table dws_uv_index_day
-partition(dt='2020-03-06')
+partition(dt='2020-10-18')
 select
 concat_ws('|', collect_set(id)) id,
 concat_ws('|', collect_set(text)) text,
@@ -246,12 +246,12 @@ max(comments_count) comments_count,
 max(attitudes_count) attitudes_count,
 concat_ws('|', collect_set(created_at)) created_at
 from dwd_weibo_index_log
-where dt='2020-03-06'
+where dt='2020-10-18'
 group by id;
 
 
 insert overwrite table dws_uv_comment_day
-partition(dt='2020-03-06')
+partition(dt='2020-10-18')
 select
 concat_ws('|', collect_set(id)) id,
 concat_ws('|', collect_set(created_at)) created_at,
@@ -259,11 +259,11 @@ concat_ws('|', collect_set(text)) text,
 max(like_count) like_count,
 concat_ws('|', collect_set(index_id)) index_id
 from dwd_weibo_comment_log
-where dt='2020-03-06'
+where dt='2020-10-18'
 group by id;
 
 insert overwrite table dws_uv_user_day
-partition(dt='2020-03-06')
+partition(dt='2020-10-18')
 select
 concat_ws('|', collect_set(id)) id,
 concat_ws('|', collect_set(screen_name)) screen_name,
@@ -276,7 +276,7 @@ max(followers_count) followers_count,
 max(follow_count) follow_count,
 concat_ws('|', collect_set(text)) text
 from dwd_weibo_user_log
-where dt='2020-03-06'
+where dt='2020-10-18'
 group by id;
 
 
@@ -350,7 +350,7 @@ comments_count comments_count,
 attitudes_count attitudes_count,
 created_at created_at
 from dws_uv_index_day
-where dt='2020-03-06';
+where dt='2020-10-18';
 
 
 
@@ -385,13 +385,13 @@ from
 select
 *
 from dws_uv_index_day
-where dt='2020-03-06'
+where dt='2020-10-18'
 ) index join
 (
 select
 *
 from dws_uv_comment_day
-where dt='2020-03-06'
+where dt='2020-10-18'
 ) comment on index.id = comment.index_id 
 ;
 
@@ -430,5 +430,5 @@ followers_count followers_count,
 follow_count follow_count,
 text text
 from dws_uv_user_day
-where dt='2020-03-06';
+where dt='2020-10-18';
 

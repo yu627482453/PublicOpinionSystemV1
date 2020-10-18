@@ -2,7 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa76c31b-e038-4b21-8ed8-04af778a1fd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/src/test/java/com/nex/service/FtpUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../conf/main.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../../../conf/main.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../conf/my.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../../../conf/my.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082104_1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082104_10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082104_2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082104_3.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082104_4.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082104_5.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082104_6.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082104_7.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082104_8.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082104_9.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082125_1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082125_10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082125_2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082125_3.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082125_4.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082125_5.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082125_6.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082125_7.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082125_8.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082125_9.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082126_10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082127_1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082127_10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082127_2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082127_3.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082127_4.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082127_5.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082127_6.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082127_7.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082127_8.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082127_9.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weibocomment-202003082128_10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weiboindex-202003082104.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weiboindex-202003082125.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../logs/weibo/weiboindex-202003082127.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../other/sqoop_export.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../other/sqoop_export.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../other/weibo_sql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../other/weibo_sql.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/forgot-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/forgot-password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/vendor/toastr/toastr.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../PublicOpinionSystem/target/classes/static/vendor/toastr/toastr.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../dataprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../dataprocessing/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -22,9 +63,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/weibo/pipelines.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/weibo/SpiderUtils.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/weibo/spiders/DailySpider.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/weibo/SpiderUtils.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/weibo/pipelines.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1YWWK2Ki2EOJZVx3buYBHyMu28m" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -36,10 +77,78 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../PublicOpinionSystemV1/code/spider" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../code/spider" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\gitRepository\PublicOpinionSystemV1\project\Spider\weiboSpider" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.tes">
+    <configuration name="tes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="weiboSpider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="weiboSpider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="weiboSpider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/weibo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\gitRepository\PublicOpinionSystemV1\project\Spider\weiboSpider\test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Twisted Trial for test_SpiderUtils.Test.test_get_index_url" type="tests" factoryName="Twisted Trial" temporary="true" nameIsGenerated="true">
       <module name="weiboSpider" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -56,6 +165,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tes" />
+        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python tests.Twisted Trial for test_SpiderUtils.Test.test_get_index_url" />
       </list>
     </recent_temporary>
@@ -74,61 +186,69 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="70" key="#Custom_Plugin_Repositories" timestamp="1583668019725">
+    <state x="93" y="105" key="#xdebugger.evaluate" timestamp="1603019798245">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="70" key="#Custom_Plugin_Repositories/0.0.1536.824@0.0.1536.824" timestamp="1583668019725" />
-    <state x="361" y="70" key="#HTTP_Proxy" timestamp="1583668024420">
+    <state x="93" y="105" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1603019798245" />
+    <state width="812" height="455" key="DebuggerActiveHint" timestamp="1603019474025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="70" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1583668024420" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1583664278616">
+    <state width="812" height="455" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1603019474025" />
+    <state x="547" y="166" key="FileChooserDialogImpl" timestamp="1602986343815">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1583664278616" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1583664451182">
+    <state x="547" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602986343815" />
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1603019970587">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583664451182" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1583629603864">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603019970587" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1603019970587">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583629603864" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1583629603864">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603019970587" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1603019970587">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583629603864" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1583629603864">
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603019970587" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1603019970587">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583629603864" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1583629603864">
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603019970587" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1603019970577">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583629603864" />
-    <state x="270" y="54" key="SettingsEditor" timestamp="1583719202247">
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603019970577" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1603019970577">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583719202247" />
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1583732694080">
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603019970577" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1603019970577">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1583732694080" />
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583639367143">
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603019970577" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1603019970577">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1583639367143" />
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1590565645845">
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603019970577" />
+    <state x="446" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1603004043860">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590565645845" />
-    <state x="510" y="54" key="refactoring.ChangeSignatureDialog" timestamp="1583627026304">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="510" y="54" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1583627026304" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1583662150864">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1583662150864" />
+    <state x="446" y="234" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1603004043860" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/weibo/spiders/ImmediateSpider.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/weibo/SpiderUtils.py</url>
+          <line>229</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
